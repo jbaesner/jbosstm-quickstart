@@ -1,6 +1,5 @@
 package org.jboss.narayana.quickstarts.wsat.jtabridge.second;
 
-import jakarta.jws.HandlerChain;
 import org.jboss.narayana.quickstarts.wsat.jtabridge.second.jaxws.SecondServiceAT;
 
 import jakarta.ejb.Remote;
@@ -18,7 +17,6 @@ import jakarta.persistence.PersistenceContext;
  */
 @Stateless
 @Remote(SecondServiceAT.class)
-@HandlerChain(file = "/context-handlers.xml")
 @WebService(serviceName = "SecondServiceATService", portName = "SecondServiceAT", name = "SecondServiceAT", targetNamespace = "http://www.jboss.org/narayana/quickstarts/wsat/simple/second")
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 @TransactionAttribute(TransactionAttributeType.MANDATORY) // default is REQUIRED
